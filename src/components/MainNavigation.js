@@ -19,7 +19,7 @@ const MainNavigation = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="/add" element={<AddContact />} />
             <Route path="/edit" element={<EditContact />} />
-            <Route path="/delete" element={<DeleteContact />} />
+            <Route path="/remove" element={<DeleteContact />} />
             <Route path="/success" element={<Success />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

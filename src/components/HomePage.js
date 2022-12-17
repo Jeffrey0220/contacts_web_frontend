@@ -2,6 +2,7 @@ import Contact from "./Contact";
 import { useState, useEffect } from "react";
 import { getAll } from "../config/HandleApi";
 import Form from "react-bootstrap/Form";
+import { motion } from "framer-motion";
 
 const HomePage = () => {
   const [contacts, setContacts] = useState([]);
@@ -22,6 +23,7 @@ const HomePage = () => {
         <h1>Contacts List</h1>
         <input
           type="search"
+          style={{ width: "23em" }}
           placeholder="Search"
           onChange={(event) => {
             setSearchTerm(event.target.value);
@@ -45,7 +47,12 @@ const HomePage = () => {
           </Form.Select>
         </div>
 
-        <div className="list">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="list"
+        >
           {contacts
             .filter((e) => {
               if (selectTerm === "") {
@@ -82,7 +89,7 @@ const HomePage = () => {
                 id={item._id}
               />
             ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

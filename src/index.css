@@ -55,6 +55,11 @@ input {
   padding: 0.5rem;
   border-bottom: 1px solid #000;
 }
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 .add {
   background-color: #000;

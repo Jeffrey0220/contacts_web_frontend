@@ -7,8 +7,8 @@ import Contact from "./Contact";
 const DeleteContact = () => {
   const location = useLocation();
 
-  const handleClick = (id) => {
-    deleteContact(id);
+  const handleClick = () => {
+    deleteContact(location.state.id);
   };
 
   return (
@@ -21,14 +21,10 @@ const DeleteContact = () => {
         address={location.state.address}
       />
 
-      <Link
-        to="/success"
-        className="btn btn-danger ms-2"
-        onClick={handleClick(location.state.id)}
-      >
+      <Link to="/success" className="btn btn-danger mt-3" onClick={handleClick}>
         Delete
       </Link>
-      <Link to="/" className="btn btn-dark ms-2">
+      <Link to="/" className="btn btn-dark ms-5 mt-3">
         Cancel
       </Link>
     </div>

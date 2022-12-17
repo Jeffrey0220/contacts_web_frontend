@@ -38,12 +38,13 @@ const EditContact = () => {
       <h3 className="text-primary fw-bold">Edit Contact</h3>
       <form
         onSubmit={handleSubmit}
-        style={{ width: "30em", display: " inline-block" }}
+        style={{ width: "23em", display: " inline-block" }}
       >
         <input
           type="text"
+          title="Edit first name"
           name="firstName"
-          className="form-control mb-3"
+          className="form-control mb-3 mt-2"
           defaultValue={location.state.firstName}
           placeholder="FirstName"
           required
@@ -51,6 +52,7 @@ const EditContact = () => {
         />
         <input
           type="text"
+          title="Edit last name"
           name="lastName"
           className="form-control mb-3"
           defaultValue={location.state.lastName}
@@ -59,6 +61,7 @@ const EditContact = () => {
         />
         <input
           type="number"
+          title="Edit phone number"
           name="phone"
           className="form-control mb-3"
           defaultValue={location.state.phone}
@@ -67,14 +70,16 @@ const EditContact = () => {
         />
         <input
           type="email"
+          title="Edit email"
           name="email"
           className="form-control mb-3"
           defaultValue={location.state.email}
           placeholder="Email"
           onChange={handleChange}
         />
-        <input
+        <textarea
           type="text"
+          title="Edit address"
           name="address"
           className="form-control mb-3"
           defaultValue={location.state.address}
@@ -83,11 +88,11 @@ const EditContact = () => {
         />
         <input
           type="submit"
-          className="btn btn-primary"
+          className="btn btn-primary mt-2"
           value="Update"
-          style={{ width: "17%" }}
+          style={{ width: "19%" }}
         />
-        <Link to="/" className="btn btn-dark ms-2">
+        <Link to="/" className="btn btn-dark ms-5 mt-2">
           Cancel
         </Link>
       </form>

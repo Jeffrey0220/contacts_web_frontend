@@ -17,7 +17,7 @@ function Success() {
         flexDirection: "column",
       }}
     >
-      <h1 style={{ fontWeight: "bold", color: "green" }}>success !</h1>
+      <h1 style={{ fontWeight: "bold", color: "green" }}>Success ! 🎉</h1>
       <p
         style={{
           fontWeight: "bold",
@@ -26,7 +26,7 @@ function Success() {
           fontFamily: "Helvetica",
         }}
       >
-        back to home page in 3 seconds...
+        Back to contacts list in 3 seconds...
       </p>
     </div>
   );

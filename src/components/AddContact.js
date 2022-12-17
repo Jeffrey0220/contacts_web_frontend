@@ -38,18 +38,20 @@ const AddContact = () => {
 
       <form
         onSubmit={handleSubmit}
-        style={{ width: "30em", display: " inline-block" }}
+        style={{ width: "23em", display: " inline-block" }}
       >
         <input
           type="text"
+          title="Enter first name"
           name="firstName"
-          className="form-control mb-3"
+          className="form-control mb-3 mt-2"
           placeholder="FirstName"
           required
           onChange={handleChange}
         />
         <input
           type="text"
+          title="Enter last name"
           name="lastName"
           className="form-control mb-3"
           placeholder="LastName"
@@ -58,6 +60,7 @@ const AddContact = () => {
         />
         <input
           type="number"
+          title="Enter a phone number"
           name="phone"
           className="form-control mb-3"
           placeholder="PhoneNumber"
@@ -66,14 +69,16 @@ const AddContact = () => {
         />
         <input
           type="email"
+          title="Enter an email"
           name="email"
           className="form-control mb-3"
           placeholder="Email"
           required
           onChange={handleChange}
         />
-        <input
+        <textarea
           type="text"
+          title="Enter an address"
           name="address"
           className="form-control mb-3"
           placeholder="Address"
@@ -82,12 +87,12 @@ const AddContact = () => {
         />
         <input
           type="submit"
-          className="btn btn-primary"
+          className="btn btn-primary mt-2"
           value="Create"
-          style={{ width: "17%" }}
+          style={{ width: "19%" }}
           required
         />
-        <Link to="/" className="btn btn-dark ms-5">
+        <Link to="/" className="btn btn-dark ms-5 mt-2">
           Cancel
         </Link>
       </form>

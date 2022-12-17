@@ -54,13 +54,4 @@ const deleteContact = (id) => {
     .catch((err) => console.log(err));
 };
 
-// const deleteContact = (_id, setContacts) => {
-//   axios
-//     .post(`${baseUrl}/delete`, { _id: "" })
-//     .then((data) => {
-//       getAll(setContacts);
-//     })
-//     .catch((err) => console.log(err));
-// };
-
 export { getAll, addContact, updateContact, deleteContact };
